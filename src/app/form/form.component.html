@@ -1,0 +1,48 @@
+<form #myForm="ngForm" novalidate (ngSubmit)="onSubmit(myForm)">
+    <div class="form-group">
+        <input class="form-control input" name="name" ngModel placeholder="Ім'я та Прізвище" />
+    </div>
+    <div class="form-group">
+        <input class="form-control input" name="date_of_birth" ngModel placeholder="Дата народженя" />
+    </div>
+    <div class="radio form-group">
+        <input type="radio" name="gender" value="Жінка" ngModel>Жінка
+        <input type="radio" name="gender" value="Чоловык" ngModel>Чоловык
+    </div>
+    <div class="form-group">
+        <p>Місто
+        <select name="city" ngModel >
+            <option value="Харків">Харків</option>
+            <option value="Kyiv">Київ</option>
+            <option value="Львів">Львів</option>
+            <option value="Одеса">Одеса</option>
+        </select></p>
+    </div>
+    <div class="form-group">
+        <textarea  class="input"  name="address" placeholder="Адреса" ngModel></textarea>
+    </div>
+    <div class="checkbox form-group" > Мови <br>
+        <div [class.isredbox]="Ukrainian"></div>
+        <div [class.isredbox]="!Ukrainian"></div>
+        <input type="checkbox" name="Ukrainian" value="Українська мова " ngModel [(ngModel)]="Ukrainian">Українська мова<Br> 
+        <div [class.isredbox]="English"></div>
+        <div [class.isredbox]="!English"></div>
+        <input type="checkbox" name="English" value="Англійська" ngModel [(ngModel)]="English" >Англійська<Br>
+        <div [class.isredbox]="French"></div>
+        <div [class.isredbox]="!French"></div> 
+        <input type="checkbox" name="French" value="Французька мова" ngModel [(ngModel)]="French">Французька мова<Br> 
+        <input type="checkbox" name="German" value="Німецька мова " ngModel [(ngModel)]="German">Німецька мова <Br> 
+    </div>
+    <input type="submit" class=" form-group submit" value="Зберегти">
+</form>
+
+<div>
+   <table>
+        <tr><td>Ім'я та Прізвище</td><td>{{myForm.value.name}}</td></tr>
+        <tr><td>Дата народженя</td><td>{{myForm.value.date_of_birth}}</td></tr>
+        <tr><td>Стать</td><td>{{myForm.value.gender}}</td></tr>
+        <tr><td>Місто</td><td>{{myForm.value.city}}</td></tr>
+        <tr><td>Адреса</td><td>{{myForm.value.address}}</td></tr>
+</table> 
+</div>
+

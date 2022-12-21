@@ -1,0 +1,76 @@
+body{
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    color: #394350;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    margin-top: 75px;
+
+    border: 1px solid #99AEC9;
+    border-radius: 6px;
+    width: 415px;
+    height: 500px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 14px;
+}
+
+.input{
+width: 285px;
+height: 35px;
+font-size: 16px;
+background: #ffffff;
+border: 1px solid #6a7c94;
+border-radius: 6px;
+color: #99AEC9;
+padding-left: 12px;
+margin-bottom: 15px;  
+font-family: unset;
+}
+
+.radio{
+    margin-bottom: 15px;
+}
+
+select{
+    width: 253px;
+    height: 35px;
+    font-size: 16px;
+    background: #ffffff;
+    border: 1px solid #6a7c94;
+    border-radius: 6px;
+    color: #69798d;
+    padding-left: 12px;
+    margin-bottom: 15px;
+}
+
+.checkbox > input{
+ margin-top: 10px;   
+}
+
+.submit{
+margin-top: 15px;
+width: 298px;
+height: 40px;
+font-size: 16px;
+background: #8d909b;
+border: 1px solid #6a7c94;
+border-radius: 6px;
+color: #f4f9ff;
+padding-left: 12px;
+margin-bottom: 15px;
+font-family: unset;   
+cursor: pointer; 
+}
+
+table, tr, td{
+border: 1px solid #6a7c94;
+border-radius: 6px;
+margin-left: 90px;
+width: 285px;
+}
+
+
